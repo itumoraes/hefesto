@@ -1,0 +1,10 @@
+development: &defaults
+  login_url: "https://example.com"
+  user: "user.example"
+  password: "password123"
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
