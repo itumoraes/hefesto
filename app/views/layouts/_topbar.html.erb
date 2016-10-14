@@ -1,0 +1,28 @@
+<div class="ls-topbar ">
+  <div class="ls-notification-topbar">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        <img src="<%= current_user.gravatar_url %>" alt="">
+        <span class="ls-name"><%= current_user.name %></span>
+        (<%= current_user.username %>)
+      </a>
+
+      <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+        <ul>
+          <li><a href="#" role="option">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+
+  <h1 class="ls-brand-name">
+    <a class="ls-ico-earth">
+      <small>O seu trabalhador pessoal</small>
+      Hefesto
+    </a>
+  </h1>
+
+  <span class="ls-show-notifications ls-ico-question"></span>
+</div>
