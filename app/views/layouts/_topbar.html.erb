@@ -2,6 +2,7 @@
   <div class="ls-notification-topbar">
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
+        <img src="<%= current_user.gravatar_url %>" alt="">
         <span class="ls-name"><%= current_user.name %></span>
         (<%= current_user.username %>)
       </a>
