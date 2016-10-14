@@ -1,3 +1,9 @@
-<h1>Hefesto</h1>
+<%= render 'layouts/topbar' %>
+<%= render 'layouts/sidebar' %>
 
-<p><%= current_user.name %> (<%= current_user.username %>)</p>
+<main class="ls-main">
+  <div class="container-fluid">
+    <h1 class="ls-title-intro ls-ico-dashboard">Dashboard</h1>
+  </div>
+  <%= render 'layouts/footer' %>
+</main>
