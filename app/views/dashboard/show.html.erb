@@ -4,6 +4,77 @@
 <main class="ls-main">
   <div class="container-fluid">
     <h1 class="ls-title-intro ls-ico-dashboard">Dashboard</h1>
+
+    <div class="ls-box ls-board-box">
+      <header class="ls-info-header">
+        <h2 class="ls-title-3">Informações Gerais</h2>
+      </header>
+
+      <div id="sending-stats" class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="ls-box">
+            <div class="ls-box-head">
+              <h6 class="ls-title-4">Quantidade de HOs Feitos</h6>
+            </div>
+
+            <div class="ls-box-body">
+              <span class="ls-board-data">
+                <strong>1 <small>milhão</small></strong>
+              </span>
+            </div>
+
+            <div class="ls-box-footer"></div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="ls-box">
+            <div class="ls-box-head">
+              <h6 class="ls-title-4">Próximo HO</h6>
+            </div>
+
+            <div class="ls-box-body">
+              <span class="ls-board-data">
+                <strong>26/10/1987</strong>
+              </span>
+            </div>
+
+            <div class="ls-box-footer">
+              <a href="#" class="ls-btn ls-btn-danger ls-btn-xs">Cancelar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="ls-box">
+            <div class="ls-box-head">
+              <h6 class="ls-title-4">Quantidade de HOs Agendados</h6>
+            </div>
+
+            <div class="ls-box-body">
+              <span class="ls-board-data">
+                <strong>10</strong>
+              </span>
+            </div>
+
+            <div class="ls-box-footer">
+              <a href="#" class="ls-btn ls-btn-xs">Visualizar datas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ls-box ls-board-box">
+      <header class="ls-info-header">
+        <h2 class="ls-title-3">Calendário</h2>
+      </header>
+
+      <%= month_calendar do |date| %>
+        <%= date %>
+      <% end %>
+    </div>
   </div>
+
   <%= render 'layouts/footer' %>
 </main>

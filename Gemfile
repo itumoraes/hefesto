@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'settingslogic'
 gem 'devise_cas_authenticatable'
+gem 'simple_calendar', '~> 2.0'
 
 group :development, :test do
   gem 'capybara'
