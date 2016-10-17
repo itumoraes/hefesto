@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class User < ApplicationRecord
   devise :cas_authenticatable, :trackable
+  has_many :home_offices
 
   def cas_extra_attributes=(extra_attributes)
     self.name = extra_attributes['cn']

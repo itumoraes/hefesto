@@ -14,10 +14,10 @@ describe User do
   describe '#cas_extra_attributes' do
     it 'maps the attributes from cas to user model' do
       extra_attributes = {
-        "authorities" => ['Hg-Freddie'],
-        "cn" => 'Jane Doe',
-        "email" => 'jane.doe@locaweb.com.br',
-        "type" => 'Employee'
+        'authorities' => ['Hg-Freddie'],
+        'cn' => 'Jane Doe',
+        'email' => 'jane.doe@locaweb.com.br',
+        'type' => 'Employee'
       }
       user = build(:user, cas_extra_attributes: extra_attributes)
 
