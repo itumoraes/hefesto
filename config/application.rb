@@ -19,5 +19,7 @@ Bundler.require(*Rails.groups)
 module Hefesto
   class Application < Rails::Application
     config.cas = config_for(:cas)
+    config.time_zone = 'Brasilia'
+    config.i18n.default_locale = 'pt-BR'
   end
 end
