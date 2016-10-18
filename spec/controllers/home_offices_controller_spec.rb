@@ -9,7 +9,7 @@ describe HomeOfficesController do
 
         expect do
           date = Time.zone.now.strftime('%Y-%m-%d')
-          post :create, home_office: { date: date }
+          post :create, params: { home_office: { date: date } }
         end.to change { HomeOffice.count }.by(1)
         expect(flash[:success]).to match(/^Home office marcado com sucesso!/)
       end
@@ -18,7 +18,7 @@ describe HomeOfficesController do
     context 'when date is invalid' do
       it 'returns a failure message' do
         sign_in create(:user)
-        post :create, home_office: { date: nil }
+        post :create, params: { home_office: { date: nil } }
 
         expect(flash[:error]).to match(/^Erro ao marcar Home office!/)
       end
