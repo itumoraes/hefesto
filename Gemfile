@@ -12,8 +12,8 @@ gem 'jquery-rails', '~> 4.1.1'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
-gem 'settingslogic'
-gem 'devise_cas_authenticatable'
+gem 'settingslogic', '~> 2.0.9'
+gem 'devise_cas_authenticatable', '~> 1.9.2'
 gem 'simple_calendar', '~> 2.0'
 
 group :development, :test do
@@ -30,11 +30,11 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'database_cleaner'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'capybara', '~> 2.10.1'
+  gem 'poltergeist', '~> 1.11.0'
+  gem 'database_cleaner', '~> 1.5.3'
+  gem 'rspec-rails', '~> 3.5.2'
+  gem 'factory_girl_rails', '~> 4.7.0'
   gem 'rubocop', require: false
   gem 'simplecov', require: false
   gem 'shoulda-matchers', '~> 3.1'
