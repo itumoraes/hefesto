@@ -9,7 +9,7 @@
 
       <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
         <ul>
-          <li><%= link_to 'Sair', destroy_user_session_path %></li>
+          <li><%= link_to t('logout'), destroy_user_session_path %></li>
         </ul>
       </nav>
     </div>
@@ -19,8 +19,8 @@
 
   <h1 class="ls-brand-name">
     <a class="ls-ico-earth">
-      <small>O seu trabalhador pessoal</small>
-      Hefesto
+      <small><%= t('hefesto_slogan') %></small>
+      <%= t('hefesto') %>
     </a>
   </h1>
 

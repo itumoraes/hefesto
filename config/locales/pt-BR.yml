@@ -1,4 +1,15 @@
 pt-BR:
+  hefesto: Hefesto
+  hefesto_slogan: O seu trabalhador pessoal
+  calendar: Calendário
+  cancel: Cancelar
+  confirm: Confirmar
+  dashboard: Dashboard
+  logout: Sair
   simple_calendar:
     previous: Anterior
     next: Próximo
+  modals:
+    create_ho:
+      title: Marcar Home Office
+      text: Deseja marcar home office no dia <strong class="ho-modal-date"></strong>?

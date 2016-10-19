@@ -3,7 +3,7 @@
 
 <main class="ls-main">
   <div class="container-fluid">
-    <h1 class="ls-title-intro ls-ico-dashboard">Dashboard</h1>
+    <h1 class="ls-title-intro ls-ico-dashboard"><%= t('dashboard') %></h1>
 
     <% flash.each do |key, value| %>
       <div class="<%= locastyle_class_for_alert(key) %> ls-dismissable">
@@ -74,7 +74,7 @@
 
     <div class="ls-box ls-board-box">
       <header class="ls-info-header">
-        <h2 class="ls-title-3">Calendário</h2>
+        <h2 class="ls-title-3"><%= t('calendar') %></h2>
       </header>
 
       <%= month_calendar do |date| %>
