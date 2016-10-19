@@ -1,24 +1,48 @@
-# README
+# Hefesto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ![hefesto](app/assets/images/hefesto.jpg)
 
-Things you may want to cover:
+> Your personal worker
 
-* Ruby version
+This is an app to manage the home office days of your team. It's a simple
+calendar that you and your coworkers can schedule the days you are going to work
+at home.
 
-* System dependencies
+### Installing dependencies
 
-* Configuration
+This project uses:
+ -  The 2.3.0 Ruby version.
+ -  The 5.0.0.1 Rails version.
 
-* Database creation
+You can install ruby with [RVM](https://rvm.io/rvm/install) and then install the
+correct version of Ruby:
 
-* Database initialization
+        $ rvm install ruby-2.3.0
 
-* How to run the test suite
+Install dependencies using bundler like above:
 
-* Services (job queues, cache servers, search engines, etc.)
+        $ bundle install
 
-* Deployment instructions
+In case you don't have bundler:
 
-* ...
+        $ gem bundler install
+
+PhantomJS is a dependency from poltergeist gem, you can install it here:
+
+   [http://phantomjs.org/download.html](http://phantomjs.org/download.html)
+
+#### Automated tests with RSpec
+
+You can run all tests using:
+
+        $ rspec
+
+#### Running in your local machine
+
+You can run like above:
+
+        $ rails server
+
+And then access the link [http://localhost:3000/](http://localhost:3000/) in
+your browser.
+
