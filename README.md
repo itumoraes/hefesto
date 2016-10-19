@@ -1,5 +1,8 @@
 # Hefesto
 
+[![Build Status](https://travis-ci.org/itumoraes/hefesto.svg?branch=master)](https://travis-ci.org/itumoraes/hefesto.svg?branch=master) [![Coverage
+Status](https://coveralls.io/repos/github/itumoraes/hefesto/badge.svg?branch=master)](https://coveralls.io/github/itumoraes/hefesto?branch=master)
+
 # ![hefesto](app/assets/images/hefesto.jpg)
 
 > Your personal worker
