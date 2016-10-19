@@ -1,0 +1,16 @@
+development: &defaults
+  login_url: "https://login.systemintegration.locaweb.com.br"
+  systems_login_url: "https://systems-login.systemintegration.locaweb.com.br"
+  user: hefesto
+  password: inicial1234
+
+sysint:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  login_url: "https://login.locaweb.com.br"
+  systems_login_url: "https://systems-login.locaweb.com.br"
