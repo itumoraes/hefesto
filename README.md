@@ -29,7 +29,7 @@ In case you don't have bundler:
 
 Setup development environment:
 
-        $ Run bin/setup
+        $ bin/setup
 
 #### Automated tests with RSpec
 
