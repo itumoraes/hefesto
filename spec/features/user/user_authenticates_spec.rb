@@ -9,5 +9,6 @@ feature 'User authenticates' do
     visit root_path
 
     expect(page).to have_content "#{user.name} (#{user.username})"
+    expect(page).to have_content "Sair"
   end
 end
