@@ -13,23 +13,23 @@ at home.
 This project uses:
  -  The 2.3.0 Ruby version.
  -  The 5.0.0.1 Rails version.
+ - Postgres
 
 You can install ruby with [RVM](https://rvm.io/rvm/install) and then install the
 correct version of Ruby:
 
         $ rvm install ruby-2.3.0
 
-Install dependencies using bundler like above:
-
-        $ bundle install
+PhantomJS is a dependency from poltergeist gem, you can install it here:
+ - [PhantomJs] (http://phantomjs.org/download.html)
 
 In case you don't have bundler:
 
         $ gem bundler install
 
-PhantomJS is a dependency from poltergeist gem, you can install it here:
+Setup development environment:
 
-   [http://phantomjs.org/download.html](http://phantomjs.org/download.html)
+        $ Run bin/setup
 
 #### Automated tests with RSpec
 
