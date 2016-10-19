@@ -4,6 +4,7 @@
 <main class="ls-main">
   <div class="container-fluid">
     <h1 class="ls-title-intro ls-ico-dashboard">Dashboard</h1>
+
     <% flash.each do |key, value| %>
       <div class="<%= locastyle_class_for_alert(key) %> ls-dismissable">
         <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
@@ -77,28 +78,10 @@
       </header>
 
       <%= month_calendar do |date| %>
-        <button class="modal-button" data-ls-module="modal" data-target="#newHomeOfficeModal"><%= date %></button>
+        <%= date %>
       <% end %>
     </div>
   </div>
 
-  <div class="ls-modal" id="newHomeOfficeModal">
-    <%= form_for @home_office do |f| %>
-      <div class="ls-modal-box">
-        <div class="ls-modal-header">
-          <button data-dismiss="modal">&times;</button>
-          <h4 class="ls-modal-title">Novo HO</h4>
-        </div>
-        <div class="ls-modal-body" id="myModalBody">
-          <p>Deseja marcar HO neste dia?</p>
-        </div>
-        <div class="ls-modal-footer">
-          <button type="button" class="ls-btn ls-float-right" data-dismiss="modal">Fechar</button>
-          <button type="submit" class="ls-btn-primary">Confirmar</button>
-        </div>
-      </div>
-      <%= f.hidden_field :date %>
-    <% end %>
-  </div>
   <%= render 'layouts/footer' %>
 </main>

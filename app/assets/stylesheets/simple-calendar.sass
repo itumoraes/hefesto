@@ -1,0 +1,76 @@
+$gray: #f0f0f0
+$purple: #5a2dc0
+
+.simple-calendar
+  .prev-month,
+  .next-month
+    background: #fff
+
+    .calendar-day
+      opacity: 0.3
+
+  .wday-6,
+  .wday-0
+    background: $gray
+
+    .calendar-day
+      opacity: 0.3
+
+.calendar-heading
+  text-align: center
+  margin-bottom: 20px
+
+  [class*="ls-btn"]
+    vertical-align: middle
+
+    &:before,
+    &:after
+      position: relative
+      top: 1px
+
+  .calendar-title
+    font-size: 36px
+    font-weight: 300
+    vertical-align: middle
+    margin: 0 20px
+
+.calendar-table
+  td
+    position: relative
+    padding: 42px 5px 5px
+
+    &.current-month
+      @for $i from 1 through 5
+        &.wday-#{$i}:hover
+          background: $gray + 10
+          cursor: pointer
+
+  .calendar-day
+    width: 24px
+    height: 24px
+    border-radius: 100%
+    background: $gray
+    display: inline-block
+    font-size: 13px
+    position: absolute
+    text-align: center
+    top: 5px
+    right: 5px
+    padding-top: 5px
+
+  .calendar-user
+    display: inline-block
+    float: left
+    margin: 0 5px 0 0
+
+    img
+      width: 30px
+      height: auto
+      border-radius: 100%
+
+  .today
+    background: #fff
+
+    .calendar-day
+      background: $purple
+      color: #fff
