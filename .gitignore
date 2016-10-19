@@ -17,3 +17,5 @@
 .byebug_history
 coverage
 config/cas.yml
+config/database.yml
+config/secrets.yml

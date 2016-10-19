@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.3.0
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - cp config/secrets.yml.example config/secrets.yml
+script:
+  - RAILS_ENV=test bundle exec rake db:create
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec
