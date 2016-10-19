@@ -38,6 +38,7 @@ group :test do
   gem 'rubocop', require: false
   gem 'simplecov', require: false
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'timecop', '~> 0.8.1'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

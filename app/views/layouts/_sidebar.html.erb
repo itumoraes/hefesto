@@ -8,17 +8,15 @@
 
     <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
       <ul>
-        <li><%= link_to 'Sair', destroy_user_session_path %></li>
+        <li><%= link_to t('logout'), destroy_user_session_path %></li>
       </ul>
     </nav>
   </div>
 
   <div class="ls-sidebar-inner">
-    <a href="/locawebstyle/documentacao/exemplos/painel1/pre-painel" class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
-
     <nav class="ls-menu" role="navigation">
       <ul role="menu">
-        <li><a href="/" class="ls-ico-dashboard" title="Dashboard" role="menuitem">Dashboard</a></li>
+        <li><a href="/" class="ls-ico-dashboard" title="Dashboard" role="menuitem"><%= t('dashboard') %></a></li>
       </ul>
     </nav>
 

@@ -1,0 +1,18 @@
+<div class="ls-modal" id="ho-modal">
+  <%= form_for @home_office do |f| %>
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button type="button" data-dismiss="modal">&times;</button>
+        <h4 class="ls-modal-title"><%= t('modals.create_ho.title') %></h4>
+      </div>
+      <div class="ls-modal-body">
+        <p><%= raw t('modals.create_ho.text') %></p>
+      </div>
+      <div class="ls-modal-footer">
+        <button type="button" class="ls-btn ls-float-right" data-dismiss="modal"><%= t('cancel') %></button>
+        <button type="submit" class="ls-btn-primary"><%= t('confirm') %></button>
+      </div>
+    </div>
+    <%= f.hidden_field :date %>
+  <% end %>
+</div>
