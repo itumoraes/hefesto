@@ -15,6 +15,7 @@ gem 'devise', '~> 4.2'
 gem 'settingslogic', '~> 2.0.9'
 gem 'devise_cas_authenticatable', '~> 1.9.2'
 gem 'simple_calendar', '~> 2.0'
+gem 'coveralls', require: false
 
 group :development, :test do
   gem 'pry-rails'
