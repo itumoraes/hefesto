@@ -14,5 +14,6 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - 'Rakefile'
+    - 'vendor/**/*'
 Rails:
   Enabled: true
