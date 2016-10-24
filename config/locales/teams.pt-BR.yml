@@ -1,0 +1,6 @@
+pt-BR:
+  teams:
+    select_team: Você deve selecionar um time para marcar HOs. Selecione um abaixo ou crie um novo
+    index:
+      teams: Times
+      join_team: Entrar para este time

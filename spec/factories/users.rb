@@ -5,5 +5,6 @@ FactoryGirl.define do
     username 'itumoraes'
     sequence(:email) { |n| "#{username}#{n}@mail.com" }
     encrypted_password 'inicial1234'
+    team
   end
 end
