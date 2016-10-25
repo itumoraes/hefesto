@@ -19,8 +19,13 @@
 
   <h1 class="ls-brand-name">
     <a class="ls-ico-earth">
-      <small><%= t('hefesto_slogan') %></small>
-      <%= t('hefesto') %>
+      <% if current_user.team.present? %>
+        <small><%= t('hefesto') %></small>
+        <%= current_user.team.name %>
+      <% else %>
+        <small><%= t('hefesto_slogan') %></small>
+        <%= t('hefesto') %>
+      <% end %>
     </a>
   </h1>
 

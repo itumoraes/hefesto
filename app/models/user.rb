@@ -2,6 +2,7 @@
 class User < ApplicationRecord
   devise :cas_authenticatable, :trackable
   has_many :home_offices
+  belongs_to :team, optional: true
 
   def cas_extra_attributes=(extra_attributes)
     self.name = extra_attributes['cn']
