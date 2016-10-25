@@ -19,8 +19,8 @@ chdir APP_ROOT do
   system('bundle check') || system!('bundle install')
 
   puts '== Copying sample files =='
-  Dir.glob('config/*.sample') do |file|
-    rename = file.gsub('.sample', '')
+  Dir.glob('config/*.example') do |file|
+    rename = file.gsub('.example', '')
     FileUtils.cp(file, rename) unless File.exist?(rename)
   end
 
