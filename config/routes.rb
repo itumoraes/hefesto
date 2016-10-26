@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   root to: 'dashboard#show'
-  resources :home_offices, only: :create
+  resources :home_offices, only: [:create, :destroy]
   resources :teams, only: :index
   resources :user, only: :update
 end

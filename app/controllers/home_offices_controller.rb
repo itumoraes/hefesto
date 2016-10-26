@@ -10,6 +10,17 @@ class HomeOfficesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @home_office = HomeOffice.find(params[:id])
+
+    if @home_office.user.eql?(current_user)
+      @home_office.destroy
+      flash[:success] = 'Home office desmarcado com sucesso!'
+    else
+      flash[:error] = 'Você não pode desmarcar esse Home office'
+    end
+  end
+
   private
 
   def home_office_params

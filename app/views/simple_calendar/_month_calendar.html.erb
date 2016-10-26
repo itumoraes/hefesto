@@ -23,11 +23,9 @@
                 <% capture_haml(date, sorted_events.fetch(date, []), &block) %>
               <% else %>
                 <% @home_offices.each do |ho| %>
-                  <% if ho.date == date %>
-                    <a class="ls-tooltip-top calendar-user" aria-label="<%= ho.user.name %>">
-                      <img src="<%= ho.user.gravatar_url %>" alt="<%= ho.user.name %>">
-                    </a>
-                  <% end %>
+                  <%= link_to image_tag(ho.user.gravatar_url, alt: ho.user.name), home_office_path(ho), method: :delete,
+                        prompt: 'Tem certeza?',
+                        class: 'ls-tooltip-top calendar-user', 'aria-label': ho.user.name if ho.date == date %>
                 <% end %>
                 <span class="calendar-day"><%= date.day %></span>
               <% end %>
