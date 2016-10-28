@@ -11,13 +11,13 @@ feature 'User views others home office on calendar', js: true do
     login_as user_a
     visit root_path
 
-    within '[data-date="2016-10-17"]' do
-      name = find('img')[:alt]
+    within '[data-td-date="2016-10-17"]' do
+      name = find('span')[:title]
       expect(name).to have_content(user_a.name)
     end
 
-    within '[data-date="2016-10-19"]' do
-      name = find('img')[:alt]
+    within '[data-td-date="2016-10-19"]' do
+      name = find('span')[:title]
       expect(name).to have_content(user_b.name)
     end
   end

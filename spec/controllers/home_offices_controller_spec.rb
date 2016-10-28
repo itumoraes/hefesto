@@ -34,7 +34,9 @@ describe HomeOfficesController do
         sign_in user
 
         expect do
-          delete :destroy, params: { id: home_office.id, date: Time.zone.now, user: user.id }
+          delete :destroy, params: { id: home_office.id,
+                                     date: Time.zone.now,
+                                     user: user.id }
         end.to change { HomeOffice.count }.from(1).to(0)
       end
     end
@@ -50,7 +52,8 @@ describe HomeOfficesController do
           delete :destroy, params: { id: home_office.id }
         end.not_to change { HomeOffice.count }
 
-        expect(flash[:error]).to match(/Você não pode desmarcar esse Home office/)
+        expect(flash[:error])
+          .to match(/Você não pode desmarcar esse Home office/)
       end
     end
   end
