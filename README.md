@@ -14,14 +14,14 @@ at home.
 ### Installing dependencies
 
 This project uses:
- -  The 2.3.0 Ruby version.
+ -  The 2.2.3 Ruby version.
  -  The 5.0.0.1 Rails version.
  - Postgres
 
 You can install ruby with [RVM](https://rvm.io/rvm/install) and then install the
 correct version of Ruby:
 
-        $ rvm install ruby-2.3.0
+        $ rvm install ruby-2.2.3
 
 PhantomJS is a dependency from poltergeist gem, you can install it here:
  - [PhantomJs] (http://phantomjs.org/download.html)
@@ -48,4 +48,3 @@ You can run like above:
 
 And then access the link [http://localhost:3000/](http://localhost:3000/) in
 your browser.
-

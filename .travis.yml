@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3.0
+  - 2.2.3
 before_script:
   - cp config/database.yml.travis config/database.yml
   - cp config/secrets.yml.example config/secrets.yml
