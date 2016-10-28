@@ -8,7 +8,11 @@ class User < ApplicationRecord
     self.name = extra_attributes['cn']
     self.user_type = extra_attributes['type']
     self.email = extra_attributes['email']
-    self.user_privilegies = extra_attributes['authorities'].join(',')
+    if extra_attributes['authorities'].is_a?(Array)
+      self.user_privilegies = extra_attributes['authorities'].join(',')
+    else
+      self.user_privilegies = extra_attributes['authorities']
+    end
   end
 
   def gravatar_url

@@ -12,20 +12,40 @@ describe User do
   end
 
   describe '#cas_extra_attributes' do
-    it 'maps the attributes from cas to user model' do
-      extra_attributes = {
-        'authorities' => ['Hg-Freddie'],
-        'cn' => 'Jane Doe',
-        'email' => 'jane.doe@locaweb.com.br',
-        'type' => 'Employee'
-      }
-      user = build(:user, cas_extra_attributes: extra_attributes)
+    context 'when authorities is an array' do
+      it 'maps the attributes from cas to user model' do
+        extra_attributes = {
+          'authorities' => ['Hg-Freddie'],
+          'cn' => 'Jane Doe',
+          'email' => 'jane.doe@locaweb.com.br',
+          'type' => 'Employee'
+        }
+        user = build(:user, cas_extra_attributes: extra_attributes)
 
-      expect(user.name).to eq(extra_attributes['cn'])
-      expect(user.email).to eq(extra_attributes['email'])
-      expect(user.user_type).to eq(extra_attributes['type'])
-      expect(user.user_privilegies)
-        .to eq(extra_attributes['authorities'].join(','))
+        expect(user.name).to eq(extra_attributes['cn'])
+        expect(user.email).to eq(extra_attributes['email'])
+        expect(user.user_type).to eq(extra_attributes['type'])
+        expect(user.user_privilegies)
+          .to eq(extra_attributes['authorities'].join(','))
+      end
+    end
+
+    context 'when authorities is an string' do
+      it 'maps the attributes from cas to user model' do
+        extra_attributes = {
+          'authorities' => 'DREAM_TEAM',
+          'cn' => 'Jane Doe',
+          'email' => 'jane.doe@locaweb.com.br',
+          'type' => 'Employee'
+        }
+        user = build(:user, cas_extra_attributes: extra_attributes)
+
+        expect(user.name).to eq(extra_attributes['cn'])
+        expect(user.email).to eq(extra_attributes['email'])
+        expect(user.user_type).to eq(extra_attributes['type'])
+        expect(user.user_privilegies)
+          .to eq(extra_attributes['authorities'])
+      end
     end
   end
 end
