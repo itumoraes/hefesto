@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
 
   def show
     @home_office = HomeOffice.new
-    @home_offices = HomeOffice.current_month
+    @home_offices = HomeOffice.current_period
   end
 
   private

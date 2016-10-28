@@ -13,3 +13,6 @@ pt-BR:
     create_ho:
       title: Marcar Home Office
       text: Deseja marcar home office no dia <strong class="ho-modal-date"></strong>?
+    destroy_ho:
+      title: Desmarcar Home Office
+      text: Deseja desmarcar o home office do dia <strong class="ho-modal-date"></strong>?

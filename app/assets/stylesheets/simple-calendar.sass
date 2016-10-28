@@ -39,11 +39,10 @@ $purple: #5a2dc0
     position: relative
     padding: 42px 5px 5px
 
-    &.current-month
+    &.day
       @for $i from 1 through 5
-        &.wday-#{$i}:hover
-          background: $gray + 10
-          cursor: pointer
+        &.wday-#{$i}:hover .calendar-add-ho
+          display: block
 
   .calendar-day
     width: 24px
@@ -59,8 +58,11 @@ $purple: #5a2dc0
     padding-top: 5px
 
   .calendar-user
+    width: 30px
+    height: 30px
     display: inline-block
     float: left
+    position: relative
     margin: 0 5px 0 0
 
     img
@@ -68,9 +70,44 @@ $purple: #5a2dc0
       height: auto
       border-radius: 100%
 
+    &.calendar-user-ho:hover
+      img
+        display: none
+
+      .calendar-del-ho
+        display: block
+
   .today
     background: #fff
 
     .calendar-day
       background: $purple
       color: #fff
+
+  .calendar-action
+    width: 30px
+    height: 30px
+    background: $gray
+    border-radius: 100%
+    color: #303030
+    cursor: pointer
+    display: none
+    float: left
+    text-align: center
+    margin: 0 5px 0 0
+    padding-top: 7px
+    -webkit-transition: background .2s ease-in-out
+    -moz-transition: background .2s ease-in-out
+    -o-transition: background .2s ease-in-out
+    transition: background .2s ease-in-out
+
+    &:before
+      margin: 0
+
+    &:hover
+      background: $gray - 20
+
+    &.calendar-del-ho
+      position: absolute
+      top: 0
+      left: 0

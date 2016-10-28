@@ -18,18 +18,22 @@
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |date| %>
-            <%= content_tag :td, data: { date: date.to_s, ls_module: 'modal', target: '#ho-modal' }, class: calendar.td_classes_for(date) do %>
+            <%= content_tag :td, data: { td_date: date.to_s }, class: calendar.td_classes_for(date) do %>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(block) %>
                 <% capture_haml(date, sorted_events.fetch(date, []), &block) %>
               <% else %>
                 <% @home_offices.each do |ho| %>
                   <% if ho.date == date %>
-                    <a class="ls-tooltip-top calendar-user" aria-label="<%= ho.user.name %>">
-                      <img src="<%= ho.user.gravatar_url %>" alt="<%= ho.user.name %>">
-                    </a>
+                    <%= content_tag :span, title: ho.user.name, class: home_office_css(ho) do %>
+                      <%= image_tag(ho.user.gravatar_url, alt: ho.user.name) %>
+                      <%= link_to '', '', class: 'calendar-action calendar-del-ho ls-ico-minus',
+                                          'aria-label': ho.user.name,
+                                          data: { date: date.to_s, action: home_office_path(ho), ls_module: 'modal', target: '#destroy-ho-modal' } if current_user_home_office?(ho) %>
+                    <% end %>
                   <% end %>
                 <% end %>
-                <span class="calendar-day"><%= date.day %></span>
+                <%= link_to '', '', class: 'calendar-add-ho calendar-action ls-ico-plus', data: { date: date.to_s, ls_module: 'modal', target: '#create-ho-modal' } unless home_office_at_date?(date) %>
+                <time class="calendar-day"><%= date.day %></time>
               <% end %>
             <% end %>
           <% end %>
