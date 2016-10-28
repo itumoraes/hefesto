@@ -1,0 +1,20 @@
+<div class="ls-topbar ls-topbar-gray">
+  <div class="ls-notification-topbar">
+
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        <img src="<%= current_user.gravatar_url %>" alt="">
+        <span class="ls-name"><%= current_user.name %></span>
+        (<%= current_user.username %>)
+      </a>
+
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <ul>
+          <li><%= link_to t('logout'), destroy_user_session_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+</div>
