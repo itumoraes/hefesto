@@ -1,0 +1,14 @@
+var teamList = $('.new-team-input').closest('.ls-list');
+
+teamList.before(`<%= render @team %>`);
+
+teamList.remove();
+
+$('[class*="ls-alert"]').remove();
+$('.ls-title-intro').after(
+  `<div class="ls-alert-success ls-dismissable">
+    <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+    <%= t('.success', team: @team.name) %>
+  </div>`
+);
+locastyle.dismiss.init();

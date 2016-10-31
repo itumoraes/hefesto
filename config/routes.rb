@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   root to: 'dashboard#show'
   resources :home_offices, only: [:create, :destroy]
-  resources :teams, only: :index
+  resources :teams, only: [:index, :new, :create]
   resources :user, only: :update
 end

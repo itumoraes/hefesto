@@ -1,5 +1,5 @@
-<%= render 'layouts/topbar' %>
-<%= render 'layouts/sidebar' %>
+<%= render 'layouts/pre_panel_topbar' %>
+<%= render 'layouts/pre_panel_sidebar' %>
 
 <main class="ls-main">
   <div class="container-fluid">
@@ -12,21 +12,9 @@
       </div>
     <% end %>
 
-    <% @teams.each do |team| %>
-      <div class="ls-list team_<%= team.id %>">
-        <header class="ls-list-header">
-          <div class="ls-list-title col-md-4">
-            <a><%= team.name %></a>
-          </div>
-          <div class="col-md-3 col-md-offset-5 ls-txt-right">
-            <%= form_for current_user do |f| %>
-              <%= f.hidden_field :team_id, value: team.id %>
-              <%= f.submit t('.join_team'), class: 'ls-btn-primary ls-btn-sm' %>
-            <% end %>
-          </div>
-        </header>
-      </div>
-    <% end %>
+    <div id="teams-list">
+      <%= render @teams %>
+    </div>
   </div>
   <%= render 'layouts/footer' %>
 </main>
