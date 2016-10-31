@@ -41,6 +41,7 @@ RSpec.configure do |config|
     Capybara::Poltergeist::Driver.new(app, options)
   end
   Capybara.javascript_driver = :poltergeist
+  Capybara.default_max_wait_time = 1
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -70,7 +71,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, :type => :controller
-
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end

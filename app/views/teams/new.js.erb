@@ -1,0 +1,40 @@
+var teamsList = $('#teams-list');
+var teamField = teamsList.find('.new-team-input');
+
+if (teamField.length) {
+  $('.ls-alert-info').remove();
+  $('.ls-title-intro').after(
+    `<div class="ls-alert-info ls-dismissable">
+      <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+      <strong>Atenção:</strong> <%= t('.new_team_warning') %>
+    </div>`
+  );
+  locastyle.dismiss.init();
+} else {
+  teamsList.append(
+    `<div class="ls-list">
+      <%= form_for @team, remote: true, html: { class: "ls-form" } do |f| %>
+        <header class="ls-list-header">
+          <div class="ls-list-title col-md-4">
+            <div class="ls-label">
+              <%= f.text_field :name, placeholder: t('.name_placeholder'), class: "new-team-input", required: true %>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-offset-5 ls-txt-right">
+            <%= f.submit t('.save'), class: "ls-btn ls-btn-primary" %>
+            <%= link_to t('.cancel'), "#", { class: "ls-btn cancel-new-team" } %>
+          </div>
+        </header>
+      <% end %>
+    </div>`
+  );
+
+  function cancelNewteam() {
+    $('.cancel-new-team').on('click', function(e) {
+      e.preventDefault();
+      $(this).closest('.ls-list').remove();
+    });
+  }
+
+  cancelNewteam();
+}

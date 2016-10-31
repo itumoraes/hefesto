@@ -4,7 +4,7 @@
 
     <nav class="ls-menu">
       <ul>
-        <li><a href="/" class="ls-ico-dashboard" title="Dashboard" role="menuitem"><%= t('dashboard') %></a></li>
+        <li><%= link_to t('teams.index.add_team'), new_team_path, remote: true, class: 'ls-ico-plus' %></li>
       </ul>
     </nav>
   </div>
