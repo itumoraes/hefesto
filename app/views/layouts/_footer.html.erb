@@ -1,32 +1,23 @@
 <footer class="ls-footer" role="contentinfo">
   <nav class="ls-footer-menu">
-    <h2 class="ls-title-footer">suporte e ajuda</h2>
+    <h2 class="ls-title-footer"><%= t('useful_links') %></h2>
     <ul class="ls-footer-list">
       <li>
-        <a href="#" target="_blank" class="bg-customer-support">
-          <span class="visible-lg">Atendimento</span>
+        <a href="https://opensource.org/licenses/MIT" target="_blank" class="bg-my-tickets">
+          <span class="visible-lg"><%= t('mit_license') %></span>
         </a>
       </li>
       <li>
-        <a href="#" target="_blank" class="bg-my-tickets">
-          <span class="visible-lg">Meus Chamados</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" target="_blank" class="bg-help-desk">
-          <span class="visible-lg">Central de Ajuda (Wiki)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" target="_blank" class="bg-statusblog">
-          <span class="visible-lg">Statusblog</span>
+        <a href="https://github.com/itumoraes/hefesto" target="_blank" class="bg-statusblog">
+          <span class="visible-lg"><%= t('github') %></span>
         </a>
       </li>
     </ul>
   </nav>
   <div class="ls-footer-info">
-    <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
-    <div class="set-ip"><strong>IP:</strong> 000.00.00.000</div>
-    <p class="ls-copy-right">Copyright © 1997-2016 Serviços de Internet S/A.</p>
+    <div class="ls-footer-info">
+      <span class="last-access ls-ico-screen"><strong><%= t('hefesto') %>: </strong><%= t('hefesto_slogan') %></span>
+      <p class="ls-copy-right"><%= t('mit_text') %></p>
+    </div>
   </div>
 </footer>
