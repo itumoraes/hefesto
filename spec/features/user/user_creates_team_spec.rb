@@ -4,7 +4,6 @@ require 'rails_helper'
 feature 'User creates a team' do
   context 'when logs in for the first time' do
     scenario 'successfully', js: true do
-      pending
       user = create(:user, team: nil)
       login_as user
 

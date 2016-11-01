@@ -5,12 +5,7 @@
   <div class="container-fluid">
     <h1 class="ls-title-intro ls-ico-dashboard"><%= t('dashboard') %></h1>
 
-    <% flash.each do |key, value| %>
-      <div class="<%= locastyle_class_for_alert(key) %> ls-dismissable">
-        <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
-        <%= value %>
-      </div>
-    <% end %>
+    <%= render partial: "shared/flash_messages" %>
 
     <div class="ls-box ls-board-box">
       <header class="ls-info-header">

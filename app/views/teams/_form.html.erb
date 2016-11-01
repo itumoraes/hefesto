@@ -1,0 +1,15 @@
+<div class="ls-list">
+  <%= form_for @team, remote: true, html: { class: "ls-form" } do |f| %>
+    <header class="ls-list-header">
+      <div class="ls-list-title col-md-4">
+        <div class="ls-label">
+          <%= f.text_field :name, placeholder: t('teams.new.name_placeholder'), class: "new-team-input", required: true %>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-offset-5 ls-txt-right">
+        <%= f.submit t('teams.new.save'), class: "ls-btn ls-btn-primary" %>
+        <%= link_to t('teams.new.cancel'), "#", { class: "ls-btn cancel-new-team" } %>
+      </div>
+    </header>
+  <% end %>
+</div>
