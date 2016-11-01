@@ -8,8 +8,9 @@ pt-BR:
       add_team: Adicionar novo time
     new:
       name_placeholder: Coloque o nome do time aqui
-      new_team_warning: Você possui um campo de cadastro de time na tela. Preencha o mesmo.
+      new_team_warning: <strong>Atenção:</strong> Você possui um campo de cadastro de time na tela. Preencha o mesmo.
       save: Salvar
       cancel: Cancelar
     create:
       success: O time %{team} foi inserido com sucesso!
+      error: O nome %{team} já foi utilizado, por favor escolha outro.
