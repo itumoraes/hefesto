@@ -12,7 +12,11 @@ class TeamsController < ApplicationController
 
   def create
     @team = Team.new(team_params)
-    @team.save
+    if @team.save
+      flash.now[:success] = t('.success', team: @team.name)
+    else
+      flash.now[:error] = t('.error', team: @team.name)
+    end
   end
 
   private

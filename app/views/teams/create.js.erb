@@ -1,12 +1,12 @@
 var teamList = $('.new-team-input').closest('.ls-list');
 
-teamList.before('<%= j render @team %>');
-
-teamList.remove();
-
 $('[class*="ls-alert"]').remove();
 
-<% flash.now[:success] = t('.success', team: @team.name) %>
 $('.ls-title-intro').after("<%= j render partial: 'shared/flash_messages' %>");
+
+<% if @team.valid? %>
+  teamList.before('<%= j render @team %>');
+  teamList.remove();
+<% end %>
 
 locastyle.dismiss.init();

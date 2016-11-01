@@ -13,3 +13,4 @@ pt-BR:
       cancel: Cancelar
     create:
       success: O time %{team} foi inserido com sucesso!
+      error: O nome %{team} já foi utilizado, por favor escolha outro.

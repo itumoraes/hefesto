@@ -26,7 +26,7 @@ describe HomeOfficesController do
   end
 
   describe 'DELETE #destroy' do
-    context 'when user destroy your own home office' do
+    context 'when user destroys your own home office' do
       it 'destroys scheduled home office' do
         user = create(:user)
         date = Time.zone.now.strftime('%Y-%m-%d')
@@ -41,8 +41,8 @@ describe HomeOfficesController do
       end
     end
 
-    context 'when user try destroy an another user home office' do
-      it 'do not destroy and show deny message' do
+    context 'when user tries to destroy other\'s home office' do
+      it 'does not destroy and show deny message' do
         user = create(:user)
         date = Time.zone.now.strftime('%Y-%m-%d')
         home_office = user.home_offices.create(date: date)
