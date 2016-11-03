@@ -1,10 +1,10 @@
 pt-BR:
   teams:
+    title: Times
     select_team: Você deve selecionar um time para marcar HOs. Selecione um abaixo ou crie um novo
     team:
       join_team: Entrar para este time
     index:
-      teams: Times
       add_team: Adicionar novo time
     new:
       name_placeholder: Coloque o nome do time aqui

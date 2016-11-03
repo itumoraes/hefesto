@@ -2,6 +2,7 @@
 class HomeOfficesController < ApplicationController
   def create
     @home_office = current_user.home_offices.new(home_office_params)
+    @home_office.team = current_user.team
     if @home_office.save
       flash[:success] = 'Home office marcado com sucesso!'
     else
