@@ -16,7 +16,8 @@
   <div class="ls-sidebar-inner">
     <nav class="ls-menu" role="navigation">
       <ul role="menu">
-        <li><a href="/" class="ls-ico-dashboard" title="Dashboard" role="menuitem"><%= t('dashboard') %></a></li>
+        <li><%= link_to t('dashboard'), root_path, class: 'ls-ico-dashboard' %></li>
+        <li><%= link_to t('teams.index.teams'), teams_path, class: 'ls-ico-users' %></li>
       </ul>
     </nav>
 
