@@ -30,7 +30,7 @@ describe HomeOfficesController do
       it 'destroys scheduled home office' do
         user = create(:user)
         date = Time.zone.now.strftime('%Y-%m-%d')
-        home_office = user.home_offices.create(date: date)
+        home_office = user.home_offices.create(date: date, team: user.team)
         sign_in user
 
         expect do
@@ -45,7 +45,7 @@ describe HomeOfficesController do
       it 'does not destroy and show deny message' do
         user = create(:user)
         date = Time.zone.now.strftime('%Y-%m-%d')
-        home_office = user.home_offices.create(date: date)
+        home_office = user.home_offices.create(date: date, team: user.team)
         sign_in create(:user)
 
         expect do

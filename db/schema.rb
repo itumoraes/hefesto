@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024154207) do
+ActiveRecord::Schema.define(version: 20161103150310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20161024154207) do
     t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "team_id"
+    t.index ["team_id"], name: "index_home_offices_on_team_id", using: :btree
     t.index ["user_id"], name: "index_home_offices_on_user_id", using: :btree
   end
 
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(version: 20161024154207) do
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "home_offices", "teams"
   add_foreign_key "home_offices", "users"
   add_foreign_key "users", "teams"
 end
