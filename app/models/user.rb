@@ -1,6 +1,8 @@
 # frozen_string_literal: true
+
 class User < ApplicationRecord
-  devise :cas_authenticatable, :trackable
+  include AuthenticationType
+
   has_many :home_offices
   belongs_to :team, optional: true
 

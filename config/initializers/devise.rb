@@ -273,7 +273,9 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   #
   ################ configs for devise_cas_authenticatable ########################
-  config.cas_base_url = Rails.configuration.cas.fetch('login_url')
-  config.cas_create_user = true
-  config.cas_enable_single_sign_out = true
+  if AuthenticationType.cas?
+    config.cas_base_url = Rails.configuration.cas.fetch('login_url')
+    config.cas_create_user = true
+    config.cas_enable_single_sign_out = true
+  end
 end

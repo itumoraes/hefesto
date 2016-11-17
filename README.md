@@ -48,3 +48,8 @@ You can run like above:
 
 And then access the link [http://localhost:3000/](http://localhost:3000/) in
 your browser.
+
+#### Setting up CAS authentication
+
+You can setup CAS authentication by just creating a cas.yml file like
+cas.yml.example
