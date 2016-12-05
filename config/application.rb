@@ -21,5 +21,6 @@ module Hefesto
     config.cas = config_for(:cas)
     config.time_zone = 'Brasilia'
     config.i18n.default_locale = 'pt-BR'
+    config.beginning_of_week = :sunday
   end
 end
