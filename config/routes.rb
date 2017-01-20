@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  devise_scope :user do
-    get '/users/sign_out' => 'devise/cas_sessions#destroy'
+  if AuthenticationType.cas?
+    devise_scope :user do
+      get '/users/sign_out' => 'devise/cas_sessions#destroy'
+    end
   end
 
   root to: 'dashboard#show'

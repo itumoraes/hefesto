@@ -3,7 +3,8 @@ module AuthenticationType
     if cas?
       klass.devise :cas_authenticatable, :trackable
     else
-      klass.devise :database_authenticatable, :trackable
+      klass.devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
     end
   end
 
